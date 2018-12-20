@@ -43,12 +43,8 @@ lint:
 
 tools:
 	@echo "==> installing required tooling..."
-	go get -u github.com/kardianos/govendor
 	go get -u github.com/alecthomas/gometalinter
 	gometalinter --install
-
-vendor-status:
-	@govendor status
 
 test-compile:
 	@if [ "$(TEST)" = "./..." ]; then \
